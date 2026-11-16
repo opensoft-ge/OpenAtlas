@@ -11,3 +11,7 @@ ADF supports version 1 documents containing paragraphs of text nodes. Unsupporte
 Requests require `Authorization: Bearer <token>`. `/healthz` is public. Unknown/repeated query parameters and unknown body fields are rejected. Authentication uses local TOKENS configuration, not vendor OAuth. Transactions commit only successful requests.
 
 `GET|PUT|DELETE /rest/api/3/issue/{idOrKey}/comment/{commentId}` reads (200), replaces the required ADF `body` (200), or deletes (204). Editors may modify their own comments; administrators may modify any tenant comment. Viewers and end users cannot modify comments, including previously authored ones. PUT preserves `author` and `created`, adding `updateAuthor` and `updated`. Unknown issue/comment combinations return 404. No visibility groups, properties, expand, notifications or overrideEditableFlag are supported; unsupported input is rejected.
+
+## AI product direction
+
+Requirement added 2026-11-16: OpenAtlas must become fully AI enabled, agentic and conversational across its core journeys. The [AI capability and acceptance guide](ai-capabilities.md) defines the required work and evidence. This direction does not change the implementation scope or historical validation results recorded above.
